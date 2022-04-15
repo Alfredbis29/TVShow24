@@ -1,56 +1,73 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Movie
 
-> Description the project.
+>MovieShow is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of Activities. 
+
+
+## Built With
+
+- JavaScript
+- Html
+- Css
+
+## Live Demo (if available)
+
+[Live Demo Link]()
 
 
 ## Built With
 
 - Major languages
+
+- HTML, CSS & JS
+- Hint, Stylelint, Eslint
 - Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+-bootstrap
+-webpack
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+
+- clone our repo(http://git@github.com:Alfredbis29/Movie.git)
+
+- Run npm start to run the project
+- Run npm run build if you have changes anything to build the bundle.
+- Then open the dist/index.html file. 
 
 ### Prerequisites
 
-### Setup
+```
+node and npm
+```
 
-### Install
+###  install
+
+Getting packages and debuging with Stylelint
+>npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+
+Getting packages and debuging with Webhint
+>npm init -y
+>npm install --save-dev hint@6.x
 
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+- streaming movies
 
 ## Authors
 
-👤 **Author1**
+👤 **Alfred Bisimwa**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Alfredbis29](https://github.com/Alfredbis29/Movie)
+- Twitter: [@Alfred bisimwa](https://twitter.com/AlfredBisimwa1)
+- LinkedIn: [@Alfred bisimwa](https://www.linkedin.com/in/kalumuna-bisimwa-0501a81a8/)
 
-👤 **Author2**
+👤 **Munezero Christian**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@kaitcham](https://github.com/kaitcham)
+- Twitter: [@kaicham](https://twitter.com/kaitcham)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kaitcham/)
 
 ## 🤝 Contributing
 
