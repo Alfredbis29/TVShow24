@@ -1,9 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+<!-- add readme -->
+
 # Movie
 
->MovieShow is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of Activities. 
-
+> MovieShow is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of Activities.
 
 ### Click [Here](https://alfredbis29.github.io/Movie/) to see deployed live version
 
@@ -80,18 +81,22 @@ npm install --save-dev hint@6.x
 npx hint .
 ```
 
-##### To Compile and See a live Version,  Run
+##### To Compile and See a live Version, Run
+
 ```
-npm run build 
+npm run build
 ```
+
 ```
 npm start
 ```
+
 ##### Tests
 
 ```
 npm run test .
 ```
+
 ## License
 
 All source code files are licensed under the permissive zlib license
