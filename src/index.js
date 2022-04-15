@@ -1,16 +1,16 @@
-import "./css/style.css";
-import "./css/comment.css";
-import getData, { addLikes, likeCount } from "./js/api";
-import createCardItem from "./js/createCardItem";
-import displayTvShownumbers from "./js/itemsCounter";
-import enableComments from "./js/CommentPopup";
+import './css/style.css';
+import './css/comment.css';
+import getData, { addLikes, likeCount } from './js/api.js';
+import createCardItem from './js/createCardItem.js';
+import displayTvShownumbers from './js/itemsCounter.js';
+import enableComments from './js/CommentPopup.js';
 
-document.addEventListener("click", async (e) => {
-  if (e.target.matches(".heart")) {
-    e.target.classList.toggle("is-active");
+document.addEventListener('click', async (e) => {
+  if (e.target.matches('.heart')) {
+    e.target.classList.toggle('is-active');
     const id = Number(e.target.id);
     const like = Number(
-      e.target.nextSibling.textContent.match(/[0-9]/g).join("")
+      e.target.nextSibling.textContent.match(/[0-9]/g).join(''),
     );
     e.target.nextSibling.textContent = `${like + 1} likes`;
     await addLikes(id);
@@ -18,17 +18,17 @@ document.addEventListener("click", async (e) => {
 });
 
 const loading = () => {
-  const cardsContainer = document.querySelector(".grid-cards-container");
-  const loadDiv = document.createElement("div");
-  const mask = document.createElement("div");
-  loadDiv.classList.add("loading");
-  mask.classList.add("mask");
+  const cardsContainer = document.querySelector('.grid-cards-container');
+  const loadDiv = document.createElement('div');
+  const mask = document.createElement('div');
+  loadDiv.classList.add('loading');
+  mask.classList.add('mask');
   cardsContainer.append(mask, loadDiv);
 };
 
 const removeLoding = () => {
-  document.querySelector(".loading").remove();
-  document.querySelector(".mask").remove();
+  document.querySelector('.loading').remove();
+  document.querySelector('.mask').remove();
 };
 
 const renderItems = async () => {

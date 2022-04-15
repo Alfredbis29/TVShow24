@@ -1,8 +1,7 @@
-const commentsEndpoint =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DWcDAh13W8mhMfudWgwK/comments";
+const commentsEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DWcDAh13W8mhMfudWgwK/comments';
 const fetchMovieComments = async (movieId) => {
   const response = await fetch(`${commentsEndpoint}?item_id=${movieId}`).catch(
-    (err) => err
+    (err) => err,
   );
   return response.json();
 };
@@ -14,22 +13,21 @@ const getTotalComments = async (movieId) => {
     .catch(() => 0);
   return res;
 };
-const popup = document.querySelector(".movie-popup");
+const popup = document.querySelector('.movie-popup');
 
 // Update UI total number of comments
 const updateTotalCommentsCount = (movieId) => {
   getTotalComments(movieId).then((total) => {
-    popup.querySelector(".total-comments").innerHTML = total;
+    popup.querySelector('.total-comments').innerHTML = total;
   });
 };
-const commentCounter = (data) =>
-  typeof data === "object" ? data.length : "invalid";
+const commentCounter = (data) => (typeof data === 'object' ? data.length : 'invalid');
 
-document.addEventListener("click", async (e) => {
-  if (e.target.matches(".comment-btn")) {
+document.addEventListener('click', async (e) => {
+  if (e.target.matches('.comment-btn')) {
     const data = await fetchMovieComments(e.target.id);
     const commentNumber = commentCounter(data);
-    document.querySelector(".total-comments").textContent = commentNumber || 0;
+    document.querySelector('.total-comments').textContent = commentNumber || 0;
   }
 });
 

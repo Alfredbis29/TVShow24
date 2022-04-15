@@ -1,29 +1,24 @@
-import updateTotalCommentsCount, { fetchMovieComments } from "./commentCounter";
+import updateTotalCommentsCount, { fetchMovieComments } from './commentCounter.js';
 
-const url1 = "https://api.tvmaze.com/shows";
-const commentsEndpoint =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DWcDAh13W8mhMfudWgwK/comments";
-const popup = document.querySelector(".movie-popup");
+const url1 = 'https://api.tvmaze.com/shows';
+const commentsEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DWcDAh13W8mhMfudWgwK/comments';
+const popup = document.querySelector('.movie-popup');
 
-const get = (url) =>
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => data)
-    .catch((error) => error);
+const get = (url) => fetch(url)
+  .then((res) => res.json())
+  .then((data) => data)
+  .catch((error) => error);
 
-const post = (url, params = {}) =>
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(params),
-  })
-    .then((res) => res.text())
-    .then((data) =>
-      data.error ? { error: true, info: data } : { error: false, info: data }
-    )
-    .catch((error) => ({ error: true, info: error }));
+const post = (url, params = {}) => fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(params),
+})
+  .then((res) => res.text())
+  .then((data) => (data.error ? { error: true, info: data } : { error: false, info: data }))
+  .catch((error) => ({ error: true, info: error }));
 
 const addComment = async (params) => {
   const response = await post(commentsEndpoint, params);
@@ -35,26 +30,26 @@ const fetchMovieData = async (movieId) => {
 };
 
 const displayMovieComments = (data) => {
-  popup.querySelector(".comments").innerHTML = data;
+  popup.querySelector('.comments').innerHTML = data;
 };
 const enableClosePopup = () => {
-  document.querySelector("#close-popup").addEventListener("click", () => {
-    popup.style.display = "none";
-    popup.innerHTML = "";
+  document.querySelector('#close-popup').addEventListener('click', () => {
+    popup.style.display = 'none';
+    popup.innerHTML = '';
   });
 };
 
 const showComments = (movieId) => {
   fetchMovieComments(movieId).then((data) => {
     if (!data.error) {
-      let comments = "";
+      let comments = '';
       data.forEach((comment) => {
         comments += `<li>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
       });
       displayMovieComments(comments);
     } else {
       displayMovieComments(
-        "No comments have been posted yet. Be the first to write something..."
+        'No comments have been posted yet. Be the first to write something...',
       );
     }
   });
@@ -103,8 +98,8 @@ const displayMoviePopup = (movieId) => {
     enableClosePopup();
     showComments(movieId);
 
-    const form = popup.querySelector(".com-form");
-    form.addEventListener("submit", (e) => {
+    const form = popup.querySelector('.com-form');
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       const user = form.elements.username.value;
       const msg = form.elements.comment.value;
@@ -120,14 +115,14 @@ const displayMoviePopup = (movieId) => {
     });
   });
 
-  popup.style.display = "block";
+  popup.style.display = 'block';
   enableClosePopup();
 };
 const enableComments = () => {
-  const commentBtns = document.querySelectorAll(".comment-btn");
+  const commentBtns = document.querySelectorAll('.comment-btn');
   commentBtns.forEach((movie) => {
-    movie.addEventListener("click", () => {
-      const movieId = movie.getAttribute("movie_id");
+    movie.addEventListener('click', () => {
+      const movieId = movie.getAttribute('movie_id');
       displayMoviePopup(movieId);
     });
   });
