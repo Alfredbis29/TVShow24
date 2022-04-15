@@ -108,8 +108,8 @@ All source code files are licensed under the permissive zlib license
 👤 **Munezero Christian**
 
 - GitHub: [@kaitcham](https://github.com/kaitcham)
-- Twitter: [@kaicham](https://twitter.com/kaitcham)
-- LinkedIn: [@kaicham](https://www.linkedin.com/in/kaitcham/)
+- Twitter: [@kaitcham](https://twitter.com/kaitcham)
+- LinkedIn: [@kaitcham](https://www.linkedin.com/in/kaitcham/)
 
 ## 🤝 Contributing
 
