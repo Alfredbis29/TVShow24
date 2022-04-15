@@ -5,55 +5,97 @@
 >MovieShow is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of Activities. 
 
 
-## Built With
-
-- JavaScript
-- Html
-- Css
+### Click [Here](https://alfredbis29.github.io/Movie/) to see deployed live version
 
 ## Video Description
 
-[Link](https://drive.google.com/file/d/1-jQL0bcFRZztz8CiPplbTZKgdweVCVmu/view?usp=sharing) 
-
+For video description Please click [Here](https://drive.google.com/file/d/1-jQL0bcFRZztz8CiPplbTZKgdweVCVmu/view?usp=sharing)
 
 ## Built With
 
-- Major languages
-
 - HTML, CSS & JS
 - Hint, Stylelint, Eslint
-- Frameworks
--bootstrap
--webpack
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-- clone our repo(http://git@github.com:Alfredbis29/Movie.git)
-
-- Run npm start to run the project
-- Run npm run build if you have changes anything to build the bundle.
-- Then open the dist/index.html file. 
+- Webpack
 
 ### Prerequisites
 
+basic requirements for building the executable are:
+
+- A working browser application (Google chrome, Mozilla Fire fox, Microsoft edge ...)
+- VSCode or any other equivalent code editor
+- Node Package Manager (For installing packages like Lighthous, webhint & stylelint used for checking for debugging bad codes before deployment)
+
+# Getting Started
+
+#### Cloning the project
+
 ```
-node and npm
+git clone  <http://git@github.com:Alfredbis29/Movie.git>
 ```
 
-###  install
+## Getting started with Webpack
 
-Getting packages and debuging with Stylelint
->npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
+npm install webpack webpack-cli --save-dev
+```
 
-Getting packages and debuging with Webhint
->npm init -y
->npm install --save-dev hint@6.x
+## Getting packages and debuging with Stylelint
 
-### Usage
+```
+npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
 
-- streaming movies
+##### For validation detection using Stylelint Run
+
+```
+npx stylelint "**/*.{css,scss}"
+```
+
+##### from parent source directory
+
+## Getting packages and debuging with ESlint
+
+```
+npm install npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+```
+
+##### For validation detection using Stylelint Run
+
+```
+npx eslint .
+```
+
+##### from parent source directory
+
+## Getting packages and debuging with Webhint
+
+```
+npm init -y
+npm install --save-dev hint@6.x
+```
+
+##### For validation detection using Webhint, Run
+
+```
+npx hint .
+```
+
+##### To Compile and See a live Version,  Run
+```
+npm run build 
+```
+```
+npm start
+```
+##### Tests
+
+```
+npm run test .
+```
+## License
+
+All source code files are licensed under the permissive zlib license
+(http://opensource.org/licenses/Zlib) unless marked differently in a particular folder/file.
 
 ## Authors
 
@@ -66,8 +108,8 @@ Getting packages and debuging with Webhint
 👤 **Munezero Christian**
 
 - GitHub: [@kaitcham](https://github.com/kaitcham)
-- Twitter: [@kaicham](https://twitter.com/kaitcham)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kaitcham/)
+- Twitter: [@kaitcham](https://twitter.com/kaitcham)
+- LinkedIn: [@kaitcham](https://www.linkedin.com/in/kaitcham/)
 
 ## 🤝 Contributing
 
