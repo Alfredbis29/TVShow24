@@ -1,6 +1,6 @@
-import { itemsCounter } from "./itemsCounter";
+import { itemsCounter } from './itemsCounter.js';
 
-test("items counter check ", () => {
+test('items counter check ', () => {
   const arr = [
     {
       id: 3,
@@ -11,7 +11,7 @@ test("items counter check ", () => {
   expect(counter).toBe(1);
 });
 
-test("items counter check if the there no data ", () => {
+test('items counter check if the there no data ', () => {
   const arr = [];
 
   const counter = itemsCounter(arr);
@@ -19,10 +19,10 @@ test("items counter check if the there no data ", () => {
   expect(counter).toBe(0);
 });
 
-test("items counter check if not an invalid data ", () => {
-  const string = "test";
+test('items counter check if not an invalid data ', () => {
+  const string = 'test';
 
   const counter = itemsCounter(string);
 
-  expect(counter).toBe("invalid");
+  expect(counter).toBe('invalid');
 });
