@@ -4,7 +4,7 @@
 
 > MovieShow is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of Activities.
 
-### Click [Here](https://alfredbis29.github.io/Movie/) to see deployed live version
+### Click [Here](https://magenta-fudge-30ff9c.netlify.app) to see deployed live version
 
 ## Video Description
 
